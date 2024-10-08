@@ -1,23 +1,46 @@
--- global
-local opts = { noremap = true, silent = true }
-local builtin = require('telescope.builtin')
+require "nvchad.mappings"
+
+-- add yours here
+
 local map = vim.keymap.set
 
--- Telescope 
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
+vim.g.neovide_scale_factor = 1.0
+local change_scale_factor = function(delta)
+  vim.g.neovide_scale_factor = vim.g.neovide_scale_factor * delta
+end
 
-map('n', '<leader>ff', builtin.find_files, {})
-map('n', '<leader>fg', builtin.live_grep, {})
-map('n', '<leader>fb', builtin.buffers, {})
-map('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set("n", "<C-=>", function()
+  change_scale_factor(1.25)
+end)
+vim.keymap.set("n", "<C-->", function()
+  change_scale_factor(1/1.25)
+end)
 
--- NvimTree
-map("n", "<C-n>", ":NvimTreeToggle<cr>", opts)
+vim.keymap.set("i", "<C-=>", function()
+  change_scale_factor(1.25)
+end)
+vim.keymap.set("i", "<C-->", function()
+  change_scale_factor(1/1.25)
+end)
+
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
+-- Normal --
 -- Better window navigation
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
-map("n", "<esc>", ":noh<cr><esc>", opts)
+
+map("n", "<leader>e", ":Lex 30<cr>")
 
 map("n", "<C-Up>", ":resize +2<CR>")
 map("n", "<C-Down>", ":resize -2<CR>")
@@ -25,9 +48,8 @@ map("n", "<C-Left>", ":vertical resize -2<CR>")
 map("n", "<C-Right>", ":vertical resize +2<CR>")
 
 --Navigate buffers
-map("n", "<Tab>", ":bnext<CR>", opts)
-map("n", "<S-Tab>", ":bprevious<CR>", opts)
-map("n", "<leader>x", ":bd<CR>", opts)
+map("n", "<S-l>", ":bnext<CR>")
+map("n", "<S-h>", ":bprevious<CR>")
 
 --Visual 
 --Stay in indent mode

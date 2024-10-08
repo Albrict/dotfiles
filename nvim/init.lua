@@ -1,8 +1,6 @@
-require ("options")
-require ("packages")
+require ("config.lazy")
 require ("keymaps")
-require ("completion")
+require ("options")
 
-require("nvim-tree").setup {}
-require("nvim-autopairs").setup {}
 require("bufferline").setup{}
+require("scope").setup({})
