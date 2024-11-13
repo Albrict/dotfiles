@@ -1,11 +1,10 @@
 vim.cmd([[set number]])
 vim.cmd([[set relativenumber]])
 vim.cmd([[set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz]])
-vim.cmd([[set colorcolumn=80]])
 vim.cmd([[set gp=git\ grep\ -n]])
 
-vim.cmd.colorscheme 'moonfly'
-vim.opt.termguicolors = true
+vim.cmd.colorscheme 'candle-grey-transparent'
+vim.opt.termguicolors = false 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -34,3 +33,8 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
+
+vim.cmd [[highlight CursorLine ctermbg=236 guibg=#3c3836]]
+vim.cmd([[set colorcolumn=80]])
+vim.cmd [[highlight ColorColumn ctermbg=238 guibg=#3c3836]]
+vim.cmd([[highlight Comment ctermfg=Green guifg=Green]])

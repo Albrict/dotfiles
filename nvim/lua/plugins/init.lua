@@ -21,4 +21,27 @@ return {
     },
     { "tiagovla/scope.nvim" },
     { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+
+    {
+      "dhananjaylatkar/cscope_maps.nvim",
+      dependencies = {
+        "nvim-telescope/telescope.nvim", -- optional [for picker="telescope"]
+        "ibhagwan/fzf-lua", -- optional [for picker="fzf-lua"]
+        "echasnovski/mini.pick", -- optional [for picker="mini-pick"]
+      },
+      opts = {},
+    },
+
+    {
+        "lewis6991/gitsigns.nvim",
+        opts = {},
+    },
+  
+    {
+      "aditya-azad/candle-grey"
+    },
+
+    {
+        "famiu/bufdelete.nvim"
+    },
 }

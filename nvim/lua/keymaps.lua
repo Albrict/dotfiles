@@ -27,7 +27,7 @@ map("n", "<C-Right>", ":vertical resize +2<CR>")
 --Navigate buffers
 map("n", "<Tab>", ":bnext<CR>", opts)
 map("n", "<S-Tab>", ":bprevious<CR>", opts)
-map("n", "<leader>x", ":bd<CR>", opts)
+map("n", "<leader>x", ":Bdelete<CR>", opts)
 
 --Visual 
 --Stay in indent mode
@@ -52,4 +52,5 @@ map("t", "<C-h>", "<C-\\><C-N><C-w>h" )
 map("t", "<C-j>", "<C-\\><C-N><C-w>j" )
 map("t", "<C-k>", "<C-\\><C-N><C-w>k" )
 map("t", "<C-l>", "<C-\\><C-N><C-w>l" )
+map("t", "<C-e>", "<C-\\><C-n>") -- Exit terminal mode
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
