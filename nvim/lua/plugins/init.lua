@@ -36,12 +36,10 @@ return {
         "lewis6991/gitsigns.nvim",
         opts = {},
     },
-  
-    {
-      "aditya-azad/candle-grey"
-    },
-
     {
         "famiu/bufdelete.nvim"
+    },
+    {
+        "zekzekus/menguless"
     },
 }
