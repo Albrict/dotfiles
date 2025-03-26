@@ -2,9 +2,10 @@ set number
 set relativenumber
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set gp=git\ grep\ -n
+set background=dark
 
-colorscheme menguless
-set termguicolors
+colorscheme off
+syntax off
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -39,7 +40,9 @@ set nocompatible
 set incsearch
 set undofile
 set undodir=~/.vim/undodir
+set path=**
+highlight LineNr ctermbg=NONE ctermfg=white guifg=white
 
-highlight ColorColumn ctermbg=238 guibg=#3c3836
-highlight Comment ctermfg=Green guifg=Green
+"highlight ColorColumn ctermbg=238 guibg=#3c3836
+"highlight Comment ctermfg=Green guifg=Green
 

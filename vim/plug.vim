@@ -1,9 +1,5 @@
 call plug#begin()
 
-"Git support
-Plug 'tpope/vim-fugitive'
-
-"To run commands async
-Plug 'skywind3000/asyncrun.vim'
+Plug 'pbrisbin/vim-colors-off'
 
 call plug#end()

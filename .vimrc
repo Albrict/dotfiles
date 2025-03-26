@@ -1,6 +1,6 @@
 "plugins
 source ~/.vim/plugins/cool.vim
-source ~/.vim/plug.vim
+source ~/.vim/plugins/a.vim
 
 "Vim options
 source ~/.vim/options.vim
